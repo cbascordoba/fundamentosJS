@@ -1,16 +1,19 @@
-var nombre='Sebastián', apellido='Córdoba'
-var nombreMayuscula= nombre.toUpperCase()
+var sacha = {
+    nombre:'Sacha',
+    apellido: 'Puertas',
+    edad: 28
+}
 
-var apellidoMinuscula =apellido.toLowerCase()
+var dario = {
+    nombre: 'Dario',
+    apellido: 'Gomez',
+    edad: 27
+}
 
-var primeraLetra = nombre.charAt(0)
+function imprimirNombreMayusculas(persona)
+{
+   var nombre = persona.nombre.toUpperCase();
+    console.log(nombre);
+}
 
-var cantidadLetras = nombre.length
-
-var nombreCompleto =   ` ${nombre} ${apellido} El mas`
-
-//var str = nombre.charAt(1) + nombre.charAt(2)
-
-var str = nombre.substr(1,2)
-
-var ultimaLetra = nombre.charAt(nombre.length-1)
+imprimirNombreMayusculas(sacha);
