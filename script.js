@@ -16,7 +16,13 @@ function imprimirNombreMayusculas({nombre})
     console.log(nombre);
 }
 
+function imprimirNombreYEdad(persona){
+    console.log(`Hola, me llamo ${persona.nombre} y tengo ${persona.edad} años. ` )
+}
+
 imprimirNombreMayusculas(sacha);
 
 //Puedo indicarle un nombre diferente al parametro de la funcion 
 imprimirNombreMayusculas({nombre: 'Pepito'})
+
+imprimirNombreYEdad(dario);
