@@ -10,10 +10,13 @@ var dario = {
     edad: 27
 }
 
-function imprimirNombreMayusculas(persona)
+function imprimirNombreMayusculas({nombre})
 {
-   var nombre = persona.nombre.toUpperCase();
+   var nombre = nombre.toUpperCase();
     console.log(nombre);
 }
 
 imprimirNombreMayusculas(sacha);
+
+//Puedo indicarle un nombre diferente al parametro de la funcion 
+imprimirNombreMayusculas({nombre: 'Pepito'})
