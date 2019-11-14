@@ -19,6 +19,14 @@ function imprimirNombreMayusculas({nombre})
 function imprimirNombreYEdad(persona){
     console.log(`Hola, me llamo ${persona.nombre} y tengo ${persona.edad} años. ` )
 }
+function cumpleanos(persona){
+    return{
+        ...persona,
+        edad:  persona.edad +1
+    }
+  
+
+}
 
 imprimirNombreMayusculas(sacha);
 
