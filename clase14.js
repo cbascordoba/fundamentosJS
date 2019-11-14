@@ -10,6 +10,12 @@ var sacha = {
     drone: true
 }
 
+var juan = {
+    nombre: 'Juan',
+    apellido: 'Gomez',
+    edad: 13
+}
+
 function imprimirProfesiones(persona){
     console.log(`${persona.nombre} es: `)
     if(persona.ingeniero){
@@ -35,14 +41,35 @@ function imprimirProfesiones(persona){
     }
 }
 
+const MAYORIA_DE_EDAD =18
+
+// function esMayorEdad(persona){
+
+//     return persona.edad >= MAYORIA_DE_EDAD
+// }
+
+// Arrow function permite asignar una funcion anonima a una variable. 
+
+// var esMayorEdad =function (persona){
+
+//     return persona.edad >= MAYORIA_DE_EDAD
+// }
+
+// Cuando tenemos un solo parametro podemos oviar los parentesis 
+const esMayorEdad = ({ edad }) => edad >=MAYORIA_DE_EDAD
+
+
 function imprimirSiEsMayorDeEdad(persona){
-    if(persona.edad >= 18){
+    if(esMayorEdad(persona)){
         console.log(`${persona.nombre} Es mayor de edad`)
     }
     else{
-        console.log(`${persona.nombre}NO Es mayor de edad`)
+        console.log(`${persona.nombre} NO Es mayor de edad`)
     }
 }
 
-imprimirProfesiones(sacha)
-imprimirSiEsMayorDeEdad(sacha)
+const permitirAcceso = ({ edad }) => !esMayorEdad({ edad }) ? console.log('ACCESO DENEGADO'): console.log('ACCESO permitido')
+
+    
+
+imprimirSiEsMayorDeEdad(juan)
